@@ -1,0 +1,40 @@
+title: Start
+position: -96,-320
+---
+Player: Oh wow another day another text system...
+Player: I really hope this one works well...
+-> I am sure it will, stay positive
+    <<jump StayPositive>>
+-> Eh... I am kinda burnt out at this point...
+    <<jump BurntOut>>
+===
+title: StayPositive
+position: 127,-111
+---
+<<set $positiveThinking = true>>
+Player: Yeah! I should stay positive, this could be the start of something new!
+Player: We should get back to learning!
+<<jump EndGame>>
+===
+title: BurntOut
+position: -275,-109
+---
+<<set $negativeThinking = true>>
+Player: Yeah I am just so tired all the time...
+Player: I think I should give up...
+<<jump EndGame>>
+===
+title: EndGame
+position: -1,191
+---
+<<if $positiveThinking == true>>
+    Player: Yeah keeping a good attitude and taking breaks is the way to go!
+<<endif>>
+
+<<if $negativeThinking == true>>
+    Player: maybe... no I can't I gotta keep trying even if its just a little!
+<<endif>>
+
+
+Keep up the great work!
+===
